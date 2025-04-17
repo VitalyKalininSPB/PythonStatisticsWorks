@@ -105,3 +105,7 @@ automobile_data.plot(x='horsepower', y='mpg',
 plt.plot(automobile_data['horsepower'], y_pred, color='red')
 
 plt.show()
+
+# Regplot
+sns.regplot(x='horsepower', y='mpg', data=automobile_data)
+plt.show()

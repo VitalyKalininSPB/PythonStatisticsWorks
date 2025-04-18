@@ -64,3 +64,37 @@ sns.countplot(x='size',
 plt.xticks(rotation=70)
 plt.title('Bill and Tips')
 plt.show()
+
+plt.figure(figsize=(10, 8))
+
+sns.scatterplot(x='total_bill', y='tip', data=tips_data)
+plt.xlabel('Total Bill')
+plt.ylabel('Tip')
+plt.show()
+
+plt.figure(figsize=(10, 8))
+sns.scatterplot(x='total_bill', y='tip', hue='smoker', data=tips_data)
+plt.xlabel('Total Bill')
+plt.ylabel('Tip')
+plt.show()
+
+plt.figure(figsize=(10, 8))
+
+sns.scatterplot(x='total_bill', y='tip',
+                hue='day',
+                size='size',
+                data=tips_data)
+plt.xlabel('Total Bill')
+plt.ylabel('Tip')
+plt.show()
+
+plt.figure(figsize=(10, 8))
+
+sns.scatterplot(x='total_bill', y='tip',
+                hue='size',
+                size='size',
+                sizes=(30, 300), hue_norm=(0, 7), legend="full",
+                data=tips_data)
+plt.xlabel('Total Bill')
+plt.ylabel('Tip')
+plt.show()
